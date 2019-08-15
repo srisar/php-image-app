@@ -1,0 +1,18 @@
+{
+  "name": "imageapp/imageapp",
+  "authors": [
+    {
+      "name": "srisar",
+      "email": "saravanamuthaly@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-pdo": "*",
+    "kosinix/grafika": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "ImageApp\\": "app/"
+    }
+  }
+}
