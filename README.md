@@ -1,2 +1,2 @@
 # ImageMAP
-A simple PHP based app to upload and display images alongside map data.
+A simple PHP based app to extract EXIF data from uploaded images.
