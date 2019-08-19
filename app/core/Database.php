@@ -38,6 +38,9 @@ class Database
     }
 
 
+    /**
+     * @return PDO
+     */
     public static function get_instance()
     {
         if (empty(self::$pdo)) {
@@ -48,6 +51,9 @@ class Database
     }
 
 
+    /**
+     * Closes the PDO connection
+     */
     public static function close()
     {
         self::$pdo = null;

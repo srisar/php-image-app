@@ -5,6 +5,8 @@ namespace ImageApp\Controllers;
 
 
 use ImageApp\Core\Request;
+use ImageApp\core\View;
+use ImageApp\Models\User;
 
 class UserController
 {
@@ -12,9 +14,10 @@ class UserController
     public function index(Request $request)
     {
 
-        var_dump($request->getParams()->getString('name', false));
+        $users = User::all();
 
-        var_dump(BASE_PATH);
+        View::setData('users', $users);
+        View::render('users/index.view');
 
     }
 

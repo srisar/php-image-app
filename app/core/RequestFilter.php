@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ImageApp\core;
+namespace ImageApp\Core;
 
 
 class RequestFilter
