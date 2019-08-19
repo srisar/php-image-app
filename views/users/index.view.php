@@ -15,12 +15,12 @@ try {
 
 ?>
 
-<?php include_once App::getBasePath() . "/views/_header.inc.php"; ?>
+<?php include_once BASE_PATH . "/views/_header.inc.php"; ?>
 
-<div class="grid-container">
+<div class="container-fluid">
 
-    <div class="grid-x">
-        <div class="cell small-6">
+    <div class="row">
+        <div class="col-12">
 
             <table>
                 <thead>
@@ -55,4 +55,4 @@ try {
 
 </div>
 
-<?php include App::getBasePath() . "/views/_footer.inc.php"; ?>
+<?php include BASE_PATH. "/views/_footer.inc.php"; ?>

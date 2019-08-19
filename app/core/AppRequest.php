@@ -4,7 +4,7 @@
 namespace ImageApp\Core;
 
 
-class Request
+class AppRequest
 {
 
     const GET = "GET";

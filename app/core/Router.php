@@ -1,7 +1,7 @@
 <?php
 namespace ImageApp\Core;
 
-use ImageApp\Core\Request;
+use ImageApp\Core\AppRequest;
 
 class Router
 {
@@ -23,7 +23,7 @@ class Router
         foreach (self::$routes as $route) {
 
             if ($route['url'] == $url) {
-                return call_user_func([new $route['classname'](), $route['method']], new Request());
+                return call_user_func([new $route['classname'](), $route['method']], new AppRequest());
             }
         }
 

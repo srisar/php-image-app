@@ -1,9 +1,12 @@
 <?php
 declare(strict_types=1);
 
+session_start();
+
 require_once "vendor/autoload.php";
 require_once "routes.php";
 
+use ImageApp\Core\AppSession;
 use ImageApp\Core\Database;
 
 $config = [
@@ -17,6 +20,13 @@ $config = [
     ]
 ];
 
+/**
+ * Initializing static app assets
+ */
 Database::init($config);
 
+/**
+ * Defining the base path for accessing assets and other resources
+ * from root path
+ */
 define('BASE_PATH', __DIR__);

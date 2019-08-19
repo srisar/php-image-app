@@ -5,13 +5,13 @@ namespace ImageApp\Controllers;
 
 
 use ImageApp\Core\App;
-use ImageApp\Core\Request;
+use ImageApp\Core\AppRequest;
 use ImageApp\Core\View;
 
 class PageController
 {
 
-    public function index(Request $request)
+    public function index(AppRequest $request)
     {
         View::render('pages/index.view');
     }

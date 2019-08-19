@@ -4,14 +4,14 @@
 namespace ImageApp\Controllers;
 
 
-use ImageApp\Core\Request;
+use ImageApp\Core\AppRequest;
 use ImageApp\core\View;
 use ImageApp\Models\User;
 
 class UserController
 {
 
-    public function index(Request $request)
+    public function index(AppRequest $request)
     {
 
         $users = User::all();

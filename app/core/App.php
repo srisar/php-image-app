@@ -13,13 +13,8 @@ class App
      */
     public static function getSiteURL(): string
     {
-        $request = new Request();
+        $request = new AppRequest();
         return $request->getScheme() . '://' . $request->getHost();
     }
 
-
-    public static function getBasePath()
-    {
-        return BASE_PATH;
-    }
 }

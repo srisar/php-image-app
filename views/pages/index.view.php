@@ -1,6 +1,6 @@
 <?php use ImageApp\Core\App;
 
-include_once App::getBasePath() . "/views/_header.inc.php"; ?>
+include_once BASE_PATH . "/views/_header.inc.php"; ?>
 
 <div class="grid-container">
 
@@ -8,4 +8,4 @@ include_once App::getBasePath() . "/views/_header.inc.php"; ?>
 
 </div>
 
-<?php include App::getBasePath() ."/views/_footer.inc.php"; ?>
+<?php include BASE_PATH ."/views/_footer.inc.php"; ?>
