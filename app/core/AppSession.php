@@ -26,7 +26,7 @@ class AppSession
 
     public static function getData($key)
     {
-        if (isset($_SESSION))
+        if (isset($_SESSION[$key]))
             return $_SESSION[$key];
 
         return null;
