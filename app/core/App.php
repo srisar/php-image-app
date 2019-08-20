@@ -17,4 +17,32 @@ class App
         return $request->getScheme() . '://' . $request->getHost();
     }
 
+    /**
+     * @param string $path
+     * @param array $params
+     * @return string
+     */
+    public static function createURL($path = '/', $params = [])
+    {
+        if (empty($params)) {
+            return self::getSiteURL() . $path;
+        } else {
+            $query = http_build_query($params);
+            return self::getSiteURL() . $path . '?' . $query;
+        }
+    }
+
+    public static function redirect($path = '/', $params = [])
+    {
+
+        if (empty($params)) {
+            header('Location:' . $path);
+        } else {
+            $query = http_build_query($params);
+            header('Location:' . $path . '?' . $query);
+        }
+
+
+    }
+
 }

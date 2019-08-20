@@ -22,7 +22,7 @@ try {
     <div class="row">
         <div class="col-12">
 
-            <table>
+            <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
                     <th>Full Name</th>

@@ -2,10 +2,16 @@
 
 include_once BASE_PATH . "/views/_header.inc.php"; ?>
 
-<div class="grid-container">
+<div class="container-fluid">
 
-    <h1>Hello world!</h1>
+    <div class="row">
+        <div class="col-12">
 
-</div>
+            <h1>Image Mapper</h1>
 
-<?php include BASE_PATH ."/views/_footer.inc.php"; ?>
+        </div><!--.col-->
+    </div><!--.row-->
+
+</div><!--.container-->
+
+<?php include BASE_PATH . "/views/_footer.inc.php"; ?>

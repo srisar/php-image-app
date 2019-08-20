@@ -9,6 +9,20 @@ class AppSession
 
 
     private const CSRF_TOKEN = 'csrf_token';
+    private const USER_ID = 'user_id';
+    private const LOGGED_IN = 'logged_in';
+    private const USER_NAME = 'user_name';
+
+    public static function init()
+    {
+        session_start();
+    }
+
+    public static function terminate()
+    {
+        $_SESSION = null;
+        session_destroy();
+    }
 
     public static function getData($key)
     {
@@ -16,6 +30,11 @@ class AppSession
             return $_SESSION[$key];
 
         return null;
+    }
+
+    public static function setData($key, $value)
+    {
+        $_SESSION[$key] = $value;
     }
 
     /**
@@ -60,5 +79,8 @@ class AppSession
     {
         return hash_equals($_SESSION[self::CSRF_TOKEN], $token);
     }
+
+
+
 
 }

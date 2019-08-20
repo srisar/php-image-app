@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-session_start();
-
 require_once "vendor/autoload.php";
 require_once "routes.php";
 
-use ImageApp\Core\AppSession;
 use ImageApp\Core\Database;
+use ImageApp\Core\AppSession;
+
+AppSession::init();
 
 $config = [
     "host" => "localhost",

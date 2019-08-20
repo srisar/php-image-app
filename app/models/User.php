@@ -203,4 +203,18 @@ class User implements AbstractModel
     {
         // TODO: Implement save() method.
     }
+
+    /**
+     * @param $username
+     * @return User
+     */
+    public static function findByUsername($username): User
+    {
+        $db = Database::get_instance();
+        $statement = $db->prepare("SELECT * FROM users WHERE username=?");
+        $statement->execute([$username]);
+
+        return $statement->fetchObject(User::class);
+    }
+
 }
